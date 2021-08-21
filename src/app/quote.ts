@@ -1,9 +1,11 @@
 export class Quotes {
-    id!: number;
-    quotedetails!:string;
-    authour!:string;
-    submitby!:string;
-    date!:Date;
+    // id!: number;
+    // quotedetails!:string;
+    // authour!:string;
+    // submitby!:string;
+    // date!:Date;
+    constructor(public id: number,public quotedetails: string,public authour: string,public submitby: string,public completeDate:Date){
+    }
 }
 
 export const quotes=[
