@@ -1,13 +1,20 @@
-<p>
-    quotes-details works!</p>
 <div class="row">
+    <p>quotes-details works!</p>
+    <div class="col-md-3">
+        <app-quotes-form (addQuote)="addnewQuote($event)"></app-quotes-form>
+    </div>
 
-    <div class="col-md-4 eachquote" *ngFor="let quote of quotes">
-        <p>{{quote.quotedetails}}</p>
-        <p>{{quote.author}}</p>
-        <p>{{quote.submitby}}</p>
-        <p>{{quote.addeddate|date}}</p>
-        <p>Added {{quote.addeddate|dateCount}} days ago</p>
+    <div class="col-md-9">
 
+        <div class="row">
+            <div class="col-md-4 eachquote" *ngFor="let quote of quotez">
+                <p>{{quote.quotedetails}}</p>
+                <p>{{quote.author}}</p>
+                <p>{{quote.submitby}}</p>
+                <p>{{quote.addeddate|date}}</p>
+                <p>Added {{quote.addeddate|dateCount}} days ago</p>
+                <!-- <p>{{quotesarr}}</p> -->
+            </div>
+        </div>
     </div>
 </div>

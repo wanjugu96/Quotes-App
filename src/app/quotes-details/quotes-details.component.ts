@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { quotes } from '../quote';
+import { Component, Input, OnInit } from '@angular/core';
+import { Quotes, quotes } from '../quote';
 
 @Component({
   selector: 'app-quotes-details',
@@ -7,11 +7,30 @@ import { quotes } from '../quote';
   styleUrls: ['./quotes-details.component.css']
 })
 export class QuotesDetailsComponent implements OnInit {
-  quotes=quotes;
-  //new quote=new Quote()
   constructor() { }
+
+  quotez:Quotes[]=[{id:1,quotedetails:"ttttt",author:"sssss",submitby:"yyyyy",addeddate: new Date(2020,12,12)}];
+  //quotes=quotes
+  //quotes=quotes
+  newQuote= new Quotes(0,"x","y","z",new Date());
+
+  addnewQuote(quote:Quotes){
+    let quoteLenghth=this.quotez.length;
+    quote.id=quoteLenghth+1;
+    quote.addeddate=new Date(quote.addeddate)
+  this.quotez.push(quote)
+  console.log(this.quotez)
+  quote.author= quote.author
+  quote.quotedetails= quote.quotedetails
+  quote.submitby= quote.submitby
+  }
+
 
   ngOnInit(): void {
   }
 
 }
+function quotesarr(quotesarr: any) {
+  throw new Error('Function not implemented.');
+}
+

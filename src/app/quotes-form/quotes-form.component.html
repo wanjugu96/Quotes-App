@@ -1,31 +1,34 @@
-<p>quotes-form works!</p>
-<div class="container-fluid">
+<p>
+    quotes-form works!</p>
+
+<div class="container-fluid ">
+
     <h2 class="text-center">Add a new quote</h2>
     <hr>
-    <form>
+    <form #quoteData="ngForm" (ngSubmit)='submitQuote(quoteData.value)'>
         <div class="form-group">
 
             <label for="name">Author</label>
-            <input type="text" required class="form-control" id="author">
+            <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author">
 
         </div>
         <div class="form-group">
 
             <label for="description">Description</label>
-            <textarea class="form-control" id="description" rows="4" required></textarea>
+            <textarea class="form-control" id="description" rows="4" required [(ngModel)]="newQuote.quotedetails" name="quotedetails"></textarea >
 
         </div>
         <div class="form-group">
 
             <label for="name">Submitted by:</label>
-            <input type="text" required class="form-control" id="submittedby">
+            <input type="text" required class="form-control" id="submittedby" [(ngModel)]="newQuote.submitby" name="submitby">
 
         </div>
         <div class="form-group">
             <label for="complete">Date added</label>
-            <input type='date' id="dateadded" required>
+            <input type='date' id="dateadded" required [(ngModel)]="newQuote.addeddate" name="addeddate">
 
         </div>
-        <button type="button" class="btn btn-primary" (ngSubmit)='submitQuote()'>Add new quote</button>
+        <button type="submit" class="btn btn-primary"  (click)="clearForm()" >Add new quote</button>
     </form>
 </div>

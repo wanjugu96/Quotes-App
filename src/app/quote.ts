@@ -1,10 +1,11 @@
 export class Quotes {
+
     // id!: number;
     // quotedetails!:string;
     // authour!:string;
     // submitby!:string;
     // date!:Date;
-    constructor(public id: number,public quotedetails: string,public authour: string,public submitby: string,public addeddate:Date){
+    constructor(public id: number,public quotedetails: string,public author: string,public submitby: string,public addeddate:Date){
     }
 }
 
