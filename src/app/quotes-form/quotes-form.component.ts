@@ -13,7 +13,7 @@ newQuote= new Quotes(0,"","","",new Date());
 
  @Output() addQuote=new EventEmitter<Quotes>();
   
-  quoteData!: NgForm;
+  
 
  submitQuote(data: { author: string; quotedetails: string; submitby: string; addeddate: Date;}){
 
@@ -29,12 +29,16 @@ alert(`Entered author is ${data.author}`)
 
 
  }
- clearForm() {
-  this.quoteData.reset();
- }
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
 }
+  
+  function quotesarr(quotesarr: any) {
+    throw new Error('Function not implemented.');
+  }
+  
+

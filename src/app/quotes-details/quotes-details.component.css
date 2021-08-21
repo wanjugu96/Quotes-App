@@ -2,3 +2,7 @@
     background-color: cornsilk;
     margin: 5px;
 }
+
+.upvotes {
+    float: left;
+}

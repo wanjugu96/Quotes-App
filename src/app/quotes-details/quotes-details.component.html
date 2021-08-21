@@ -13,6 +13,16 @@
                 <p>{{quote.submitby}}</p>
                 <p>{{quote.addeddate|date}}</p>
                 <p>Added {{quote.addeddate|dateCount}} days ago</p>
+
+                <div class="upvotes">
+                    <button (click)="upvote">Upvote</button>
+                    <p>{{upvotes}}vote(s)</p>
+                </div>
+                <div class="downvotes">
+                    <button (click)="downvote">Down vote</button>
+                    <p>{{upvotes}}vote(s)</p>
+                </div>
+                <!-- {{downvotes}} -->
                 <!-- <p>{{quotesarr}}</p> -->
             </div>
         </div>
