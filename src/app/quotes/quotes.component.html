@@ -1,15 +1,18 @@
-<h1><b>Real squotes works</b>!</h1>
-
-<div class="row">
-    <div class="col-md-3">
-        <app-quotes-form (addQuote)="addnewQuote($event)"></app-quotes-form>
-    </div>
-    <div class="col-md-9">
-        <div class="row">
-            <div class="eachquote col-md-4" *ngFor="let quote of quotes">
-                <p>{{quote.quotedetails}}</p>
-                <p>{{quote.submitby}}</p>
-                <app-quotes-details [quotess]='quote' (isComplete)='quoteDelete($event,index)'></app-quotes-details>
+<div class="container">
+    <header>
+        <h1><b>Quotes by Famous people</b>!</h1>
+    </header>
+    <div class="row">
+        <div class="col-md-3">
+            <app-quotes-form (addQuote)="addnewQuote($event)"></app-quotes-form>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="eachquote col-md-4" *ngFor="let quote of quotes">
+                    <p>{{quote.quotedetails}}</p>
+                    <p>{{quote.submitby}}</p>
+                    <app-quotes-details [quotess]='quote' (isComplete)='quoteDelete($event,index)'></app-quotes-details>
+                </div>
             </div>
         </div>
     </div>
