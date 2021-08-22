@@ -8,13 +8,15 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { QuotesFormComponent } from './quotes-form/quotes-form.component';
 import { FormsModule } from '@angular/forms';
 import { DateCountPipe } from './date-count.pipe';
+import { HighestvotesDirective } from './highestvotes.directive';
 @NgModule({
   declarations: [
     AppComponent,
     QuotesDetailsComponent,
     QuotesComponent,
     QuotesFormComponent,
-    DateCountPipe
+    DateCountPipe,
+    HighestvotesDirective
     
   ],
   imports: [
