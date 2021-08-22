@@ -29,9 +29,9 @@ downvote(){
   return this.downvotes
 }
 downvotess:number=this.downvotes
-// deleteQuote(complete:boolean){
-//   this.isComplete.emit(complete);
-// }
+deleteQuote(complete:boolean){
+  this.isComplete.emit(complete);
+}
   ngOnInit(): void {
   }
 
