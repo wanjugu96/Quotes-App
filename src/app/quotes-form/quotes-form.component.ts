@@ -12,10 +12,12 @@ export class QuotesFormComponent implements OnInit {
 newQuote= new Quotes(0,"","","",new Date());
 
  @Output() addQuote=new EventEmitter<Quotes>();
-  
+  quoteData!: NgForm;
+ 
+ 
  
 
- submitQuote(data: { author: string; quotedetails: string; submitby: string; addeddate: Date;}){
+ submitQuote(data: { author: string; quotedetails: string; submitby: string; addeddate: Date;quoteData:NgForm}){
 
 this.newQuote.author=data.author;
 this.newQuote.quotedetails=data.quotedetails;
@@ -23,13 +25,16 @@ this.newQuote.submitby=data.submitby;
 this.newQuote.addeddate=data.addeddate;
 
 this.addQuote.emit(this.newQuote);
-   //console.log(Quotes)
-  
-alert(`Entered author is ${data.author}`)
-
-
+   this.quoteData.value.formReset()
+ 
  }
-
+  
+resetForm:HTMLFormElement= <HTMLFormElement>document.getElementById('formid');
+if(resetForm: any){
+    resetForm.reset();}
+//  clearform() {
+//   this.quoteData.reset();
+//   }
   constructor() { }
 
   ngOnInit(): void {

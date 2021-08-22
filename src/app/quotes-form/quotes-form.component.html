@@ -2,7 +2,7 @@
 
     <h2 class="text-center">Add a new quote</h2>
     <hr>
-    <form #quoteData="ngForm" (ngSubmit)='submitQuote(quoteData.value) '>
+    <form id="formid" #quoteData="ngForm" (ngSubmit)='submitQuote(quoteData.value) '>
         <div class="form-group">
 
             <label for="name">Author</label>
@@ -26,6 +26,7 @@
             <input type='date' id="dateadded" required [(ngModel)]="newQuote.addeddate" name="addeddate">
 
         </div>
-        <button type="submit" class="btn btn-primary"  >Add new quote</button>
+        <button type="submit" class="btn btn-primary"   >Add new quote</button>
+
     </form>
 </div>
