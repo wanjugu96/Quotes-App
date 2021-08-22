@@ -7,3 +7,42 @@
     float: left;
     margin: 5px;
 }
+
+.downvotes {
+    float: right;
+    margin: 5px;
+}
+
+.delete {
+    float: right;
+}
+
+.col-md-9 {
+    background-color: cadetblue;
+}
+
+#dislikebtn {
+    background-image: url(src\app\quotes-details\images\dislike.png);
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-color: #eee;
+    float: right;
+}
+
+#likebtn {
+    background-image: url(src\app\quotes-details\images\like.png);
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-color: #eee;
+    float: left;
+}
+
+#deletebtn {
+    background-image: url(src\app\quotes-details\images\delete.png);
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-color: #eee;
+}
