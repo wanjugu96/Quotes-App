@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Quotes, quotes } from '../quote';
+import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
+import { Quotes} from '../quote';
 
 @Component({
   selector: 'app-quotes-details',
@@ -7,25 +7,31 @@ import { Quotes, quotes } from '../quote';
   styleUrls: ['./quotes-details.component.css']
 })
 export class QuotesDetailsComponent implements OnInit {
+  disabled!:boolean
   constructor() { }
 
-  quotez:Quotes[]=[{id:1,quotedetails:"ttttt",author:"sssss",submitby:"yyyyy",addeddate: new Date(2020,12,12)}];
+  @Input()
+  quotess!: Quotes;
   //quotes=quotes
-  //quotes=quotes
-  newQuote= new Quotes(0,"x","y","z",new Date());
+//   @Output() isComplete=new EventEmitter<boolean>();
+  
+// downvotes:number=0;
+// upvotes:number=0;
 
-  addnewQuote(quote:Quotes){
-    let quoteLenghth=this.quotez.length;
-    quote.id=quoteLenghth+1;
-    quote.addeddate=new Date(quote.addeddate)
-  this.quotez.push(quote)
-  console.log(this.quotez)
-  quote.author= quote.author
-  quote.quotedetails= quote.quotedetails
-  quote.submitby= quote.submitby
-  }
+//   upvote(){
 
+// this.upvotes=this.upvotes+1;
+// return this.upvotes;
+//   }
 
+// downvote(){
+//   this.downvotes=this.downvotes+1;
+//   return this.downvotes
+// }
+// downvotess:number=this.downvotes
+// deleteQuote(complete:boolean){
+//   this.isComplete.emit(complete);
+// }
   ngOnInit(): void {
   }
 
