@@ -5,20 +5,14 @@
 
 .upvotes {
     float: left;
-    margin: 5px;
 }
 
 .downvotes {
     float: right;
-    margin: 5px;
 }
 
 .delete {
     float: right;
-}
-
-.col-md-9 {
-    background-color: cadetblue;
 }
 
 #dislikebtn {
@@ -46,4 +40,10 @@
     background-size: cover;
     background-color: #eee;
     float: right;
+}
+
+.row {
+    background-color: #7a81be;
+    color: white;
+    margin: 4px;
 }

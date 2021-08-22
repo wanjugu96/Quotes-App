@@ -1,28 +1,18 @@
 <div class="row">
-    <p>quotes-details works!</p>
-
-
-    <div class="col-md-9">
-
-        <div class="row">
-
-            <p>{{quotess.author}}</p>
-            <p>{{quotess.addeddate|date}}</p>
-            <p>Added {{quotess.addeddate|dateCount}} days ago</p>
-            <div class="votes">
-                <div class="upvotes">
-                    <button id="likebtn" (click)="upvote()"></button>
-                    <p>{{upvotes}} </p>
-                </div>
-                <div class="downvotes">
-                    <button id="dislikebtn" (click)="downvote()"></button>
-                    <p>{{downvotes}}</p>
-                </div>
-            </div>
-            <div class="delete">
-                <button id="deletebtn" (click)='deleteQuote(true)'></button>
-            </div>
-
+    <p>Submitted by: {{quotess.submitby}} , {{quotess.addeddate|date}} {{quotess.addeddate|dateCount}} days ago</p>
+    <div class="votes">
+        <div class="upvotes">
+            <button id="likebtn" (click)="upvote()"></button>
+            <p>{{upvotes}} </p>
+        </div>
+        <div class="downvotes">
+            <button id="dislikebtn" (click)="downvote()"></button>
+            <p>{{downvotes}}</p>
         </div>
     </div>
+    <div class="delete">
+        <button id="deletebtn" (click)='deleteQuote(true)'></button>
+    </div>
+
+
 </div>

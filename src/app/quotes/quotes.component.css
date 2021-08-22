@@ -9,3 +9,11 @@ header {
 .container {
     background-color: whitesmoke;
 }
+
+.col-md-4 {
+    background-color: whitesmoke;
+    margin: 7px;
+    border: solid;
+    padding: 15px;
+    box-shadow: 5px 10px #888888;
+}

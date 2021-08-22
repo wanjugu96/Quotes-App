@@ -8,9 +8,9 @@ import {  Quotes } from '../quote';
 })
 export class QuotesComponent implements OnInit {
   quotes:Quotes[] = [
-    new Quotes (1,'Charles','The human spirit must prevail over technology to allow humans be in charge.','Albert Einstein', new Date(2019,7,12)),
-    new Quotes (2,'Wendy','Technology… the knack of so arranging  that we don’t have to experience it.','Max Frisch',new Date(2019,7,14))
-    // new Quotes (3,'Mikey','The great myth of our times is that technology is communication.','Libby Larsen',new Date(2019,6,3))
+    new Quotes (1,'Your time is limited, so dont waste it living someone elses life. Dont be trapped by dogma – which is living with the results of other peoples thinking','Steve Jobs','Charles',new Date(2020,7,12)),
+    new Quotes (2,'If you look at what you have in life, you will always have more. If you look at what you do not have in life, you will never have enough.','Oprah Winfrey','Wendy',new Date(2021,7,12)),
+   new Quotes (3,'Life imposes things on you that you can’t control, but you still have the choice of how you’re going to live through this.','LCeline Dion','Mikey',new Date(2019,6,3))
     // new Quotes (4,'Beatrice','Communications tools don’t get socially interesting until they get technologically boring.','Clay Shirky',new Date(2019,7,7)),
     // new Quotes (5,'Charles','Programs must be written for people to read, and only incidentally for machines to execute.','Harold Abelson',new Date(2019,7,17)),
     // new Quotes (6,'Alfred','For a list of all the ways technology has failed to improve the quality of life, please press three.','Alice Kahn',new Date(2019,7,15))
@@ -25,7 +25,7 @@ export class QuotesComponent implements OnInit {
     let quoteLenghth=this.quotes.length;
     quote.id=quoteLenghth+1;
     quote.addeddate=new Date(quote.addeddate)
-  this.quotes.push(quote)
+  this.quotes.unshift(quote)
   console.log(this.quotes)
   quote.author= quote.author
   quote.quotedetails= quote.quotedetails
