@@ -1,6 +1,6 @@
 <div class="container">
     <header>
-        <h1><b>Quotes by Famous people</b>!</h1>
+        <h1><b>Quotes by Famous people</b></h1>
     </header>
     <div class="row">
         <div class="col-md-3">
@@ -8,9 +8,9 @@
         </div>
         <div class="col-md-9">
             <div class="row">
-                <div class="eachquote col-md-4" *ngFor="let quote of quotes">
-                    <p>"{{quote.quotedetails}}"</p>
-                    <p>~{{quote.author}}~</p>
+                <div class="col-md-4" *ngFor="let quote of quotes ">
+                    <p class="eachquote ">"{{quote.quotedetails}}"</p>
+                    <p class="eachquote">~{{quote.author}}~</p>
                     <app-quotes-details [quotess]='quote' (isComplete)='quoteDelete($event,index)'></app-quotes-details>
                 </div>
             </div>
